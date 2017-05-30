@@ -16,3 +16,7 @@ https://github.com/chaopeng/IdentifyInputSource. It also shows the event is from
 mouse.
 
 Is there any other API I can try? Or is there missing any configuration?
+
+## Doc
+- https://msdn.microsoft.com/en-us/library/windows/desktop/hh454916(v=vs.85).aspx
+- https://msdn.microsoft.com/en-us/library/windows/desktop/hh448801(v=vs.85).aspx
