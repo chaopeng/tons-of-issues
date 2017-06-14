@@ -127,7 +127,8 @@ void LogPointerEvent(UINT32 pointer_id, wstring name) {
   }
 
   wstringstream wss;
-  wss << L"Event: " << name << ", type=";
+  wss << L"Event: " << name << " id:" << pointer_id << " device: " << pt_info.sourceDevice
+      << ", type=";
   switch (pt_info.pointerType) {
   case PT_POINTER:
     wss << "PT_POINTER";
@@ -171,6 +172,10 @@ LRESULT CALLBACK WndProc(HWND hWnd,
 	  case WM_POINTERDOWN:
       pointer_id = GET_POINTERID_WPARAM(wParam);
       LogPointerEvent(pointer_id, L"WM_POINTERDOWN");
+      break;
+    case WM_POINTERACTIVATE:
+      pointer_id = GET_POINTERID_WPARAM(wParam);
+      LogPointerEvent(pointer_id, L"WM_POINTERACTIVATE");
       break;
     case WM_CREATE: {
       output = CreateWindow(L"EDIT", NULL,
