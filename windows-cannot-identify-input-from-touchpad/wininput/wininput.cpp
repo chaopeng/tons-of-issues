@@ -169,7 +169,7 @@ LRESULT CALLBACK WndProc(HWND hWnd,
       pointer_id = GET_POINTERID_WPARAM(wParam);
       LogPointerEvent(pointer_id, L"WM_POINTERHWHEEL");
       break;
-	  case WM_POINTERDOWN:
+    case WM_POINTERDOWN:
       pointer_id = GET_POINTERID_WPARAM(wParam);
       LogPointerEvent(pointer_id, L"WM_POINTERDOWN");
       break;
